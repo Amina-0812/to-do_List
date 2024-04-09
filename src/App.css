@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+.app-container {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #ffe8e8e8; /*the light pink background*/
+  min-height: 100vh; /*adjusting to cover the entire viewport*/
+  display: flex;
+  flex-direction: column; /*adjusted to stack content vertically */
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-title {
+  color: #9c27b0;
+  margin-top: 2rem; /*adjusted to create space above the title */
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-wrapper {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin-bottom: 2rem; /*adjusted to create space below the task list */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  color: #333;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  color: #757575;
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-name {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #9c27b0;
+}
+
+.task-description {
+  font-size: 1rem;
+  color: #9c27b0;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+}
+
+.action-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  color: #ff4081;
+}
+
+.add-icon {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #ff4081;
+  margin-right: 0.5rem; /*adding spacing between icon and button text */
+}
+
+.task-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.task-form input[type="text"],
+.task-form textarea {
+  outline: none;
+  background: none;
+  border: 1px solid #9c27b0; /*the input border color*/
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  color: #333; /*the input text color */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-form input[type="text"]::placeholder,
+.task-form textarea::placeholder {
+  color: #9c27b0; /*placeholder text color */
+}
+
+.task-form button {
+  background: #9c27b0;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 1rem; /*adding margin to separate button from inputs*/
+}
+
+.task-form button[type="submit"] {
+  margin-top: 1rem; /*adding margin to separate button from inputs*/
+}
+
+.add-icon {
+  margin-right: 0.5rem; /*adding spacing between icon and button text */
 }
